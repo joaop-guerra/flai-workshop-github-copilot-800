@@ -17,6 +17,9 @@ if codespace_name:
 else:
     base_url = "http://localhost:8000"
 
+# Expose base_url for use in views
+API_BASE_URL = base_url
+
 router = DefaultRouter()
 router.register(r'users', UserViewSet, basename='user')
 router.register(r'teams', TeamViewSet, basename='team')
